@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Layout</title>
+    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+    <style>
+        /* Basic CSS for layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* we create a new hdnav div and add that header and navbar in it so we can handle it very well for fixed position of that both tags */
+        #hdnav{
+          width: 100%;
+          height: auto;
+          /* position: fixed; */
+        }
+        header {
+
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            width: 100%;
+        }
+        .logoimg{
+          padding-left: 0%;
+          margin-left: 0%;
+        }
+        #logoimg{
+         width: 50px;
+          height: 50px;
+        }
+        nav {
+          /* position: fixed; */
+           width:100%;
+            background-color: #444;
+            color: #fff;
+            /* padding: 10px; */
+           
+           
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            
+        }
+        nav ul li {
+          /* we have to set list tag attribute  display :inline;  in <ul>*/
+            display: inline; 
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #c6f545;
+            text-decoration: none;
+        }
+        .dropbtn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
+        }
+
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropdown-content {
+          display: none;
+          position: absolute;
+          background-color: #01b881;
+          
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {background-color: #ddd;}
+
+        .dropdown:hover .dropdown-content {display: block;}
+
+        .dropdown:hover .dropbtn {background-color: #3e8e41;}
+/* sidebarMain */
+        #SidebarMain{
+            width: 100%;
+            height: auto;
+        
+        }
+/* sidebar css */
+        .sidebar {
+            width: 250px;
+            height: 800px;
+            background-color: #444;
+            float: left;
+            padding: 20px;
+            /* margin-top: 20px; */
+        }
+        /* ............... */
+          .sdlink{
+            width:max-content;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 15px;
+          }  
+
+/* content css */
+        .content {
+            margin-left: 280px;
+            padding: 20px;
+            
+           
+        }
+        
+/* footer css */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            font-family:cursive;
+            padding: 10px;
+            clear: both;
+        }
+/* //////////////// */
+#headImg{
+        width: 300px;
+        height: 300px;
+       }
+        .subFont{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 14px;
+        
+      }
+      
+      .specialHead{
+        font-family:'Times New Roman', Times, serif;
+      }
+
+      .normalFont{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+
+      /* a:visited {
+          color: #e4e3f1;
+          text-decoration: none;
+      }
+
+      
+      a:hover {
+          color: #0c0c0b;
+          text-decoration: none;
+          
+      }
+
+      a:active {
+          color: #86ee40;
+          text-decoration: none;
+      }  */
+    </style>
+     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+  <div id="hdnav">
+    <header>
+      <div class="logoimg"><img id="logoimg" src="./images/vote2.png" alt="image not available"></div>
+      <div>
+        <h1>WWW.DoVote.Com</h1>
+      </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="services.html">Services</a>
+                <div class="dropdown-content">
+                    <a href="">election</a>
+                    <a href="https://www.eci.gov.in/">Election commission of india</a>
+                </div>
+            </li>
+            <li><a href="admin.html">results</a></li>
+            <li><a href="nomination.html">nominations</a></li>
+            <li><a href="aboutus.html">About</a></li>
+            <li><a href="contactUs.html">Contact</a></li>
+            <li class="dropdown">
+        
+              <button class="dropbtn">LogIn</button>
+              <div class="dropdown-content">
+                <a href="voterlogin.html">Voter LogIn</a>
+                <a href="voterlogin.html">Candidate LogIn</a>
+                <a href="admin.html">Admin LogIn</a>
+            </div>
+            </li>
+
+        </ul>
+    </nav>
+  </div>
+  <!-- header code end -->
+  <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+ <br> <div id="SidebarMain">
+    <div class="sidebar">
+        <a href=""><h2 class="sdlink">elections</h2></a>
+        <a href="voterlist.php"><h2 class="sdlink">voter list</h2></a>
+        <a href="nomination.html"><h2 class="sdlink">candidate list</h2></a>
+
+    </div class="content">
+    <!-- ............................................................................................................ -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="jumbotron text-center text-block" style="padding-top:170px;">
+              <img id="headImg" src="images/Vote.png" alt="">
+                  <h1 class="specialHead">Online Voting System</h1>
+                  <p class="normalFont">Safe . Reliable . Secure . Fast </p>
+
+                  <a href="voterlogin.html" class="btn btn-primary btn-md specialHead"> <span class="glyphicon glyphicon-tag"></span> Cast Your Vote</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conatiner" id="featuresTab">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <div class="page-header" style="padding-top:50px;padding-bottom:50px">
+              <h1 class="normalFont" style="font-size:44px;" >WHAT IS IT.</h1>
+              <p class="subFont" style="font-size:24px;"><em>A Intractive Way To Solve Conventional Voting.</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="conatiner" style="padding:50px;" id="aboutTab">
+        <div class="row">
+
+          
+
+          <div class="col-sm-4 text-center">
+            <a href="saveVote.php" class="normalFont" style="font-size:28px;">
+            <img src="images/Nominee.png" width="100" height="100" alt=""/></a>
+            <h2 class="normalFont" style="font-size:28px;">VOTE ONLINE.</h2>
+            <p><em>You Just Need Basic Details of Yours and We Will Let You Vote.</em></p>
+            
+          </div>
+          <div class="col-sm-4 text-center">
+            <a href="nomination.html" class="normalFont" style="font-size:28px;">
+            <img src="images/Vote.png" width="100" height="100" alt=""/></a>
+            <h2 style="color: black">Nomination</h2>
+            <p><em>Admin's Control Panel allows you to manage the list of  filled nomination.</em></p>
+
+          </div>
+          <div class="col-sm-4 text-center"> 
+            
+            <a href="admin.html" class="normalFont" style="font-size:28px;">
+            <img src="images/Stats.png" width="100" height="100" alt=""/></a>
+            <h2 class="normalFont" style="font-size:28px;" >Statitics</h2>
+            <p><em>SHows You the Graphical Data Representation of your votes. And, It is in Admin's Control Panel.</em></p>
+            
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+ <!--@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-->
+    <footer>
+        <div>
+            <h3>Office Address</h3>
+            <p>dayanand science college, latur</p>
+            <p>email:rajutigote9@gmail.com</p>
+            <p>contact: 9503036797</p>
+        </div>
+    </footer>
+ 
+</body>
+</html>
