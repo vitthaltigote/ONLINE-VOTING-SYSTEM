@@ -10,9 +10,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    /* display: flex;
+    justify-content: center; */
+    align-items: center; 
     height: 100vh;
     background-color: #f5f5f5;
 }
@@ -127,7 +127,7 @@ nav {
     
         </div>
         <br>
-        <div>
+        <div class="col-sm-4 text-center"> 
         <?php
 // include or required method 
           require('config.php');
@@ -150,10 +150,10 @@ nav {
 				
           
 
-    if(isset($_POST["username"]) && isset($_POST["voter_id"]) && isset($_POST["password"]))
+    if(isset($_POST["email"]) && isset($_POST["voter_id"]) && isset($_POST["password"]))
     {
         // by test_input() method we save it in another variables after cleaning of user inserted data as we require.
-        $name= test_input($_POST["username"]);
+        $email= test_input($_POST["email"]);
         $userid= test_input($_POST["voter_id"]);
         $password= test_input($_POST["password"]);
     }
@@ -175,10 +175,10 @@ nav {
           {
             echo"<h1 align='center'>good luck\n\n<h1><br><br>";
           }
-				$sql= "INSERT INTO db_evoting.voter_register (username,voter_id,password) VALUES('".$name."','".$userid."','".$password."');";
+				$sql= "INSERT INTO db_evoting.voter_register (email,voter_id,password) VALUES('".$email."','".$userid."','".$password."');";
        
 				if(mysqli_query($conn, $sql)){
-					// echo "<img src='images/vote.png' align='center' width='70' height='70'>";
+					echo "<img src='images/vote.png' align='center' width='70' height='70'>";
 					echo "<h3 class='text-info specialHead text-center' align='center'><strong> YOU'VE  SUCCESSFULLY   REGISTERD.</strong></h3>";
                 }
 				else
@@ -190,8 +190,8 @@ nav {
 
 				
 				?>
-
         </div>
+        <script src="js/bootstrap.min.js"></script>
     </body>
     </html>
     		

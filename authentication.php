@@ -82,9 +82,9 @@
         <div class="col-sm-4"></div>
         <div class="col-sm-4 text-center" style="border:2px solid gray;padding:50px;">
           <?php
-                    
+                  session_start();  
 
-                      // Credentials
+                      //db conn Credentials
                       $hostname= "localhost";
                       $username= "root";
                       $password= "";

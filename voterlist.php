@@ -137,6 +137,7 @@
         </tr>
             </thead>
             <tbody>
+                <!-- table tbody end -->
         <?php
         
             require('config.php');
