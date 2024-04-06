@@ -177,8 +177,8 @@
                 <td>".$row["email"]."</td>
                 <td>".$row["voter_id"]."</td>
                 <td>".$row["voted_for"]."</td>
-                <td><a href='./admincontrol/voterUpdate.php' class='btn btn-success'>Update</a></td>
-                <td><a href='./admincontrol/voterDelete.php' class='btn btn-danger'>Delete</a></td>
+                <td><a href='voterUpdate.php' class='btn btn-success'>Update</a></td>
+                <td><a href='voterDelete.php' class='btn btn-danger'>Delete</a></td>
                 </tr><br><br>";
                 }
             }
