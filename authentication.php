@@ -119,7 +119,7 @@
                           die("Connection Failed : ".mysqli_connect_error());
                         }
 
-                        $sql= "SELECT * FROM db_evoting.tbl_admin WHERE admin_username='".$admin_username."' AND admin_password='".$admin_password."'";
+                        $sql= "SELECT * FROM db_evoting.tbl_admin WHERE admin_username='".$admin_username."' AND admin_password='".$admin_password."' ";
                         $query= mysqli_query($conn, $sql);
                        
 
