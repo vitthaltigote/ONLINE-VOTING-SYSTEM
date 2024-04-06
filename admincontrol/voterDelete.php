@@ -1,7 +1,7 @@
-<?php  include('./include%20files/header.php'); ?>
+<?php  include('./includefiles/header.php'); ?>
 
 <h2 align='center'>Voter Update</h2>
 
 
 
-<?php  include('./include%20files/footer.php'); ?>
+<?php  include('./includefiles/footer.php'); ?>
