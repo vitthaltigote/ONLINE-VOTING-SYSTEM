@@ -175,10 +175,10 @@
                 <td>".$row["id"]."</td>
                 <td>".$row["full_name"]."</td>
                 <td>".$row["email"]."</td>
-                <td>".$row["voter_.id"]."</td>
+                <td>".$row["voter_id"]."</td>
                 <td>".$row["voted_for"]."</td>
-                <td><a href='#' class='btn btn-success'>Update</a></td>
-                <td><a href='#' class='btn btn-danger'>Delete</a></td>
+                <td><a href='./admin control/voterUpdate.php' class='btn btn-success'>Update</a></td>
+                <td><a href='./admin control/voterDelete.php' class='btn btn-danger'>Delete</a></td>
                 </tr><br><br>";
                 }
             }
