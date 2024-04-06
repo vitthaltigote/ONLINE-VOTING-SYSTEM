@@ -62,7 +62,7 @@
           <ul class="nav navbar-nav">
             
              <li><a href="nomination.html"><span class="subFont"><strong>Nomination's List</strong></span></a></li>
-             <li><a href="voterlist.php"><span class="subFont"><strong>Voter List</strong></span></a></li>
+             <li><a href="adminVoterlist.php"><span class="subFont"><strong>Voter List</strong></span></a></li>
             <li><a href="changePassword.php"><span class="subFont"><strong>Admin's Password</strong></span></a></li>
             
             <!-- <li><a href=""><span class=""><strong>Feedback Report</strong></span></a></li>  -->
