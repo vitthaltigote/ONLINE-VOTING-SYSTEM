@@ -58,6 +58,25 @@
         color: #fff;
         text-decoration: none;
     }
+    .htitle{
+      background-color: #333;
+      height:auto;
+      margin-top: 3%;
+      width: 100%;
+      align-content: center;
+
+    }
+    h2{
+      height:fit-content;
+      color: #fff;
+      text-align: center;
+      font-size: 2cm;
+    }
+    footer{
+    margin-bottom: 10px;
+    padding-bottom: 0%;
+    text-align: center;
+    }
     </style>
 
 
@@ -70,7 +89,6 @@
   </head>
   <body>
 	
-	<div class="container">
   	<nav class="navbar navbar-default navbar-fixed-top navbar-inverse
     " role="navigation">
       <div class="container">
@@ -97,15 +115,34 @@
 
       </div> <!-- end of container -->
     </nav>
+<div class="htitle">
 
+<h2 align='center'>Voter delete process</h2>
 
-<h2 align='center'>Voter delete</h2>
+</div>
+<!-- logic of delete voter -->
+<?php
 
+    include('config.php');
 
+if(isset($_GET['id']))
+{
+    $id=$_GET['id'];
+
+    $query="delete from `tbl_users` where `id`= '$id'";
+    $result= mysqli_query($conn,$query);
+  if(!$result)
+  {
+  die("query failed");
+  }
+else
+  header('location:cpanel.php?delete_msg= you have delete voter successfully.');
+  }
+?>
 
         <footer>
                 <p>&copy; <?php echo date("Y"); ?> Voting Website. All rights reserved.</p>
         </footer>
-    </div>
+
   </body>
 </html>

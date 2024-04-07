@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>voter List</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -92,6 +92,7 @@
         background-color:lavender;
 
     }
+
     </style>
 </head>
 <body>
@@ -171,15 +172,19 @@
                 // </table>";
 
                 while($row= mysqli_fetch_assoc($result)){
-               echo" <tr>
-                <td>".$row["id"]."</td>
-                <td>".$row["full_name"]."</td>
-                <td>".$row["email"]."</td>
-                <td>".$row["voter_id"]."</td>
-                <td>".$row["voted_for"]."</td>
-                <td><a href='voterUpdate.php' class='btn btn-success'>Update</a></td>
+
+                    ?>
+               <tr>
+                <td><?php echo $row['id']; ?></td>
+                <td><?php echo $row['full_name']; ?></td>
+                <td><?php echo $row['email']; ?></td>
+                <td><?php echo $row['voter_id']; ?></td>
+                <td><?php echo $row['voted_for']; ?></td>
+                <td><a href="voterUpdate.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Update</a></td>
                 <td><a href='voterDelete.php' class='btn btn-danger'>Delete</a></td>
-                </tr><br><br>";
+                </tr><br><br>
+
+                <?php
                 }
             }
         ?></tbody>
