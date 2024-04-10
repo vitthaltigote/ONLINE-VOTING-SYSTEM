@@ -173,18 +173,18 @@
 
                 while($row= mysqli_fetch_assoc($result)){
 
-                    ?>
+                echo"
                <tr>
-                <td><?php echo $row['id']; ?></td>
-                <td><?php echo $row['full_name']; ?></td>
-                <td><?php echo $row['email']; ?></td>
-                <td><?php echo $row['voter_id']; ?></td>
-                <td><?php echo $row['voted_for']; ?></td>
-                <td><a href="voterUpdate.php?id=<?php echo $row['id']; ?>" class="btn btn-success">Update</a></td>
-                <td><a href='voterDelete.php' class='btn btn-danger'>Delete</a></td>
-                </tr><br><br>
+                <td>" .$row['id']."</td>
+                <td>" .$row['full_name']."</td>
+                <td>" .$row['email']."</td>
+                <td>" .$row['voter_id']."</td>
+                <td>" .$row['voted_for']."</td>
+                <td><a href='voterUpdate.php?id=$row[id]' class='btn btn-success'>Update</a></td>
+                <td><a href='voterDelete.php?id=$row[id]' class='btn btn-danger'>Delete</a></td>
+                </tr><br><br>";
 
-                <?php
+                
                 }
             }
         ?></tbody>
