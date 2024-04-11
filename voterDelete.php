@@ -28,7 +28,7 @@ if($result)
   }
 else
   {
-    echo"something going wrong";
+    echo"something going wrong...";
 }
 }
 ?>
