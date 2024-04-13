@@ -67,14 +67,16 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
+    $email = $_POST["email"];
     $password = $_POST["password"];
 
-    $sql = "SELECT * FROM voter_register WHERE username='$username' AND password='$password'";
-    $result = $conn->query($sql);
+    $sql = "SELECT * FROM voter_register WHERE email='$email' AND password='$password'";//checking record in table 
 
-    if ($result->num_rows > 0) {
-        $_SESSION["username"] = $username;
+    $result = $conn->query($sql);//check record present or not
+
+    if ($result->num_rows > 0)//checking rows in result set
+    {
+        $_SESSION["email"] = $email;
         header("Location: vault.html");
     } else {
         echo "Invalid username or password<br><br>

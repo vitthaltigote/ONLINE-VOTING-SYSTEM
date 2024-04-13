@@ -146,14 +146,16 @@
 	// ADD USER NAME FIELD HERE-- FROM SESSION
 	//**********************************
 
-	$sql="SELECT * FROM db_evoting.tbl_admin WHERE admin_password='".$old."'";
+	$sql="SELECT * FROM db_evoting.tbl_admin WHERE admin_password='".$old."'";/// check old pass is match in table
 	$query= mysqli_query($conn, $sql);
-	$rows= mysqli_num_rows($query);
+
+	$rows= mysqli_num_rows($query);/// if any row are present function return true
 	if($rows==1)
 	{
 		// Given Password is Valid
-		$sql="UPDATE db_evoting.tbl_admin SET admin_password='$new' WHERE admin_username='admin'"; // =============EDIT *SESSSION_SUERNAME *
-		if($query= mysqli_query($conn, $sql))
+		$sql="UPDATE db_evoting.tbl_admin SET admin_password='$new' WHERE admin_username='admin'"; // =============EDIT 
+	
+    if($query= mysqli_query($conn, $sql))//if query is satishfied then update successfully
 		{
 			// Successfully Changed
 			echo "<img src='images/success.png' width='70' height='70'>";

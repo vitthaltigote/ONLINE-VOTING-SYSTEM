@@ -116,7 +116,7 @@
 				}
 				else
 				{
-					echo "<br>All Field Recquired";
+					echo "<br>All Field Recquired and click sumbit";
 				}
 				
        $DB_HOST= "localhost";
@@ -130,7 +130,7 @@
 				
           if($conn)
           {
-            echo"database connection successful\n";
+            // echo"database connection successful\n";
           }
 				// $sql= "INSERT INTO db_evoting.tbl_users VALUES(NULL,'".$name."','".$email."','".$voterID."','".$selection."');";
 				$sql= "INSERT INTO db_evoting.tbl_users (full_name,email,voter_id,voted_for) VALUES('".$name."','".$email."','".$voterID."','".$selection."');";

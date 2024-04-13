@@ -91,7 +91,7 @@
       </div> <!-- end of inner container -->
     </nav>
         <div id="profile">
-          <a href="#">
+          <a href="profiles.php">
             <img id="prof" src="./images/user.png" alt="image not available">
           </a>
          </div>
@@ -114,10 +114,10 @@
             <input type="text" name="voterName" pattern="[A-Za-z]{6,}" title="Enter Your Full Name" placeholder="Enter Your Full Name" class="form-control" required/><br>
 
             <label>Voter's Registered Email ID :</label><br>
-            <input type="text" name="voterEmail" placeholder="Enter Your Email ID" class="form-control"/><br>
+            <input type="text" name="voterEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter Your Email ID" class="form-control"/><br>
 
             <label>Voter's Card No. :</label><br>
-            <input id="id1" type="text" name="voterID" pattern="[0-9].{6,}" placeholder="Enter Your Voter Uniquie ID" class="form-control" required/><br>
+            <input id="id1" type="text" name="voterID" pattern="[0-9].{6,}" placeholder="Enter Your Voter Uniquie ID(V_id > 6 Digit)" class="form-control" required/><br>
             
             <h3 class="normalFont">Selet Any One of Them,</h3>
             <div class="radio">

@@ -23,7 +23,7 @@ $id=$_GET['id'];
   $result= mysqli_query($conn,$query);
 if($result)
   {
-     echo "<script>alert('Record Deleted successful');</script>";
+     echo "<script type='text/javascript'>alert('Record Deleted successful');</script>";
         header('location:adminVoterlist.php');
   }
 else
